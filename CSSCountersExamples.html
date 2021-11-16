@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- CSS Counters Examples
+        Counters let you adjhust the apperacne of countet based on its placement in the documet
+    
+        Counters use th following properties:
+
+        *counter-rest -> Creates or resets a counter
+        *counter-increment -> Increments a counter value
+        *content -> Inserts generated contetn
+        *counter() or counters() function -> Adds the value of a counter to an element
+
+        IMPORTANT: To use CSS counter, it must first be created with counter-rest.
+    -->
+    <style>
+        /*Create a counter for the page (in the body selector), 
+        then increment the counter value for each <h2> element and adds "Section<value of the counter."
+        to de beginning of each <h2> element*/
+        body {
+            counter-reset: section;
+        }
+
+        h2::before {
+            counter-increment: section;
+            content: "Section "counter(section) ": ";
+        }
+
+        /* 
+        This example creates one couner for the page (section) and one counter for each h1 element (subsection) 
+        For this example h3 and h4 is used to ilustrate.
+        */
+        h3 {
+            counter-reset: subsection;
+        }
+
+        h3::before {
+            counter-increment: section;
+            content: "Section "counter(section) ": ";
+        }
+
+        h4::before {
+            counter-increment: subsection;
+            content: counter(section) "."counter(subsection) " ";
+        }
+
+        /*A counter can also be useful to make outlined list becasue a new instance of a counter is 
+          automatically created in child elements. Here we use the counter() function to insert a string between 
+          different levels of nested counters.*/
+        ol {
+            counter-reset: section;
+            list-style-type: none;
+        }
+
+        li::before {
+            counter-increment: section;
+            content: counters(section, ".") " ";
+        }
+    </style>
+
+<body>
+    <div>
+        <br>
+        <h1>CSS COUNTER Examples</h1>
+        <br>
+        <br>
+        <h2>This title is add it to the "Section" counter</h2>
+        <h2>This is another "h2" header that is also add it to the counter </h2>
+        <h2>If more headers are add it, the counter will increase as well</h2>
+        <h2>This should count as number 4 in the counter secction</h2>
+        <h2>The more headers we add to the body section, the more Sections are add it to the counter, and the counter
+            also increase</h2>
+    </div>
+    <br>
+    <br>
+    <div>
+        <h3>NESTING COUNTERS</h3>
+        <h3>This example is nested with subsections</h3>
+        <h4>as well as this h4 element</h4>
+        <h4>which is add it to the counter and then add it to</h4>
+        <h4>its subsection</h4>
+    </div>
+    <br>
+    <br>
+    <div>
+        <h1>NESTING COUNTERS OUTLINED LIST</h1>
+        <ol>
+            <li>item</li>
+            <li>item
+                <ol>
+                    <li>item</li>
+                    <li>item</li>
+                    <li>item</li>
+                    <li>item</li>
+                    <li>item
+                        <ol>
+                            <li>item</li>
+                            <li>item</li>
+                            <li>item</li>
+                            <li>item</li>
+                        </ol>
+                    </li>
+                    <li>item</li>
+                    <li>item</li>
+                    <li>item</li>
+                </ol>
+            </li>
+            <li>item</li>
+            <li>item</li>
+        </ol>
+
+        <ol>
+            <li>item</li>
+        </ol>
+
+
+    </div>
+
+
+</body>
+
+</head>
+
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <title>CSS website layout</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        /*This is a templete/layout of a website*/
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 10px;
+            background: darkgrey;
+        }
+
+        /* Header/Blog Title */
+        .header {
+            padding: 30px;
+            text-align: center;
+            background: white;
+        }
+
+        .header h1 {
+            font-size: 50px;
+        }
+
+        /* Style the top navigation bar */
+        .topnav {
+            overflow: hidden;
+            background-color: dimgray;
+        }
+
+        /* Style the top nav links */
+        .topnav a {
+            float: left;
+            display: block;
+            color: lightskyblue;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        /* Change color of links on nav bar on hover */
+        .topnav a:hover {
+            background-color: linen;
+            color: black;
+        }
+
+        /*Create two unequal columns that floats next to each other */
+
+        /* Left column */
+        .leftcolumn {
+            float: left;
+            width: 75%;
+        }
+
+        /* Right column */
+        .rightcolumn {
+            float: left;
+            width: 25%;
+            background-color: blanchedalmond;
+            padding-left: 20px;
+        }
+
+        /* Images / photos / pictures*/
+        .images {
+            background-color: #aaa;
+            width: 100%;
+            padding: 20px;
+        }
+
+        /* Add a card effect for the articles */
+        .card {
+            background-color: white;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        /* Clear floats after the columns */
+        .row::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Footer */
+        .footer {
+            padding: 20px;
+            text-align: center;
+            background: #ddd;
+            margin-top: 20px;
+        }
+
+        /* Responsive layout - when the screen is less than 800px wide,
+   make the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 800px) {
+            .leftcolumn, .rightcolumn{
+                width: 100%;
+                padding: 0;
+            }
+        }
+        /* Responsive layout -when the screen is less than 400px wide, make the navigation links
+        stack on top of each other insetead of next to each other */
+        @media screen and (max-width: 400px){
+            .topnav a {
+                float: none;
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Website Layout</h1>
+        <p>Resize the browser window to see the effect of the responsive layout.</p>
+    </div>
+    <div class="topnav">
+        <a href="https://www.youtube.com" style="margin-right: 10px;"><Link>Youtube  </Link></a>
+        <a href="https://www.hacksplaining.com" style="margin-right: 10px;"><Link> How to hacksplaining  </Link></a>
+        <a href="https://www.investopedia.com" style="margin-right: 10px;"><Link> investopedia  </Link></a>
+        <a href="https://www.google.com" style="float: right;"><Link>Google</Link></a>
+
+    </div>
+
+    <div class="row">
+        <div class="leftcolumn">
+            <div class="card">
+                <h2>Title Heading Goes Here</h2>
+                <h5>This is for title description or other comments.</h5>
+                <div class="images" style="height: 400px;" >
+                <img src="Images/astronaut.webp" alt="astronaut" width="300" height="300">
+                </div>
+                <p>Some text... about whatever!</p>
+                <p>This space can be used to add more information about anythinng we want or is
+                    required. Just add anything that you want here! it could be a description of the image,
+                    or anything like that...
+                </p>
+
+            </div><!-- end of div card -->
+            <div class="card">
+                <h2>Title Heading Goes Here</h2>
+                <h5>This is for title description or other comments.</h5>
+                <div class="images" style="height: 400px;" >
+                <img src="Images/solar-system.webp" alt="SolarSystem" width="300" height="300">
+                </div>
+                <p>Some text... about whatever!</p>
+                <p>This space can be used to add more information about anythinng we want or is
+                    required. Just add anything that you want here! it could be a description of the image,
+                    or anything like that...
+                </p>
+
+            </div><!-- end of div card -->
+        </div>
+        <div class="rightcolumn">
+            <div class="card">
+                <h2>About Me</h2>
+                <div class="images" style="height: 130px;">
+                <img src="Images/astronauttwo.jpg" alt="AstronautTwo" width="90" height="90">
+                </div>
+                <p>My name is Daniel Luna, and this is the beggining of my path to become a programmer and a Cybersecurity Specialist</p>
+            </div>
+            <div class="card">
+                <h3>Popular Post</h3>
+                <div class="images">
+                    <img src="Images/boat.jpg" alt="boat" width="90" height="90">
+                </div>
+                <div class="images">
+                    <img src="Images/Quantum-Computing.jpg" width="90" height="90"></div>
+                <div class="images">
+                    <img src="Images/Super-Nova.bmp" width="90" height="90"></div>
+            </div>
+            <div class="card">
+                <a href="https://www.linkedin.com/in/daniel-luna-vazquez-info" target="_blank">Follow Me</a>
+                <p>Please add me to your linkedIn network</p>
+            </div>
+        </div>
+    </div><!--End of class="row" div-->
+<div class="footer">
+    <h2>This is just a template that could be used in the future as reference.</h2>
+</div>
+</body>
+
+</html>

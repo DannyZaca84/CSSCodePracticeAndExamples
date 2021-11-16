@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="us-US">
+
+<head>
+    <title>CSS Color Keyword</title>
+    <meta name="viewport" content="with=device-with, initial-scale=1.0">
+    <style>
+        body {
+            background-image: url(Images/paperBackground.jpeg);
+        }
+
+        div.ex1 {
+            background-color: lightseagreen;
+            border: 2px solid black;
+            padding: 15px;
+        }
+
+        div.ex2 {
+            background-color: transparent;
+            border: 2px solid black;
+            padding: 15px;
+        }
+
+        #currentcolor {
+            color: blue;
+            border: 10px solid currentColor;
+            padding: 15px;
+        }
+
+        #currentcolor2 {
+            color: purple;
+        }
+
+        #purpleexample {
+            color: white;
+            background-color: purple;
+        }
+
+        #inherit {
+            border: 2px solid red;
+        }
+
+        span {
+            border: inherit;
+        }
+    </style>
+
+</head>
+
+<body>
+    <p>This are examples that explain the <strong>transparent, currentcolor,</strong> and <strong>inherit</strong>
+        keywords.</p>
+    <br>
+    <h1>The Transparent Keyword</h1>
+    <br>
+    <p>The transparent keyword is used to make a color transparent. This is often used to make a transparent background
+        for an element.<br>EXAMPLE:</p>
+    <br>
+
+    <div id="transparentbackground">
+        <div class="ex1">This div has a light green background.</div><br>
+        <div class="ex2">This div has a transparent background.</div>
+        <p><strong>Note:</strong> The transparent keywords is equivalent to rgba(0,0,0,0).RGBA color values are an
+            extension of RGB color values with an alpha channel - which specifies the opacity for a color. </p>
+    </div>
+    <div id="currentcolor">
+        <h1>The currentcolor Keyword</h1>
+        <br>
+        <p>The <strong>currentcolor</strong> keyword is like a variable that holds the current value of the color
+            property of an element.<br>
+            This keyword can be useful if you want a specific color to be consistent in an element or a page.</p>
+    </div>
+    <br>
+    <div id="currentcolor2">
+        <h2>The currentcolor Keyword</h2>
+        <p>This is some text in the body part...</p>
+
+        <div id="purpleexample">
+            <p>The currentcolor keyword refers to the current value of the color property of an element.</p>
+
+
+        </div>
+    </div>
+    <br>
+    <div>
+        <h1>The inherit Keyword</h1>
+        <div id="inherit">
+        Here, the <span>span element's</span> border settings will be inherited from the parent element.
+        </div>
+        <br>
+        <div style="border: 2px dotted blue;">
+        Here, the <span>span element's</span> border settings will also be inherited from the parent element.</div>
+
+
+
+    </div>
+</body>
+
+</html>

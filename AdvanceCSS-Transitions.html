@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title>CSS 3D Transform</title>
+    <!-- Make the website responsive -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta charset="UTF-8" dir="ltr">
+    <meta name="description" content="SEO goes here!">
+    <meta name="application-name" content="CSS 3D Transformation">
+    <!-- Add fonts URL to be used in this page using this next meta -->
+    <link rel="stylesheet" href="fonts url goes here">
+    <style>
+        #title {
+            text-align: center;
+            font-weight: bolder;
+        }
+
+        div#example1 {
+            width: 100px;
+            height: 100px;
+            background: darksalmon;
+            transition: width 2s;
+        }
+
+        div#example1:hover {
+            width: 300px;
+        }
+
+        div#example2 {
+            width: 100px;
+            height: 100px;
+            background: rgb(137, 182, 85);
+            transition: width 2s, height 4s;
+        }
+
+        div#example2:hover {
+            width: 300px;
+            height: 300px;
+        }
+
+        /* Transition timing functions divs */
+        div#example3 {
+            width: 100px;
+            height: 100px;
+            background: red;
+            transition: 2s;
+        }
+
+        div#example4 {
+            width: 100px;
+            height: 100px;
+            background: orange;
+            transition: 2s;
+        }
+
+        div#example5 {
+            width: 100px;
+            height: 100px;
+            background: yellow;
+            transition: 2s;
+        }
+
+        div#example6 {
+            width: 100px;
+            height: 100px;
+            background: greenyellow;
+            transition: 2s;
+        }
+
+        div#example7 {
+            width: 100px;
+            height: 100px;
+            background: blue;
+            transition: 2s;
+        }
+
+        div#example3 {
+            transition-timing-function: linear;
+        }
+
+        div#example4 {
+            transition-timing-function: ease;
+        }
+
+        div#example5 {
+            transition-timing-function: ease-in;
+        }
+
+        div#example6 {
+            transition-timing-function: ease-out;
+        }
+
+        div#example7 {
+            transition-timing-function: ease-in-out;
+        }
+
+        div#example3:hover {
+            width: 300px;
+        }
+
+        div#example4:hover {
+            width: 300px;
+        }
+
+        div#example5:hover {
+            width: 300px;
+        }
+
+        div#example6:hover {
+            width: 300px;
+        }
+
+        div#example7:hover {
+            width: 300px;
+        }
+
+        div#example8 {
+            width: 100px;
+            height: 100px;
+            background: chartreuse;
+            transition: width 6s;
+            transition-delay: 1s;
+        }
+
+        div#example8:hover {
+            width: 300px;
+        }
+
+        div#example9 {
+            width: 100px;
+            height: 100px;
+            background-color: darksalmon;
+            transition: width 2s, height 2s, transform 2s;
+        }
+
+        div#example9:hover {
+            width: 300px;
+            height: 300px;
+            background:mediumorchid;
+            transform: rotate(180deg);
+        }
+
+        /* 
+        Short hand transition syntax 
+        div {
+        width: 100px;
+        height: 100px;
+        background: red;
+        transition: width 2s linear 1s;
+            }
+
+        div:hover {
+        width: 300px;
+                }
+        The short hand syntax is 
+        div {
+            transition: width 2s linear 1s;
+        }
+        
+        */
+    </style>
+</head>
+
+<body>
+    <h1 id="title">CSS Transitions</h1>
+    <p>CSS transitions allows you to change property values smoothly, over a given duration.This topic will be about the
+        following properties:</p>
+    <ul>
+        <li>transition</li>
+        <li>transition-delay</li>
+        <li>transition-duration</li>
+        <li>transition-property</li>
+        <li>transition-timing-function</li>
+    </ul>
+    <h1 id="title">How to Use CSS Transitions?</h1>
+    <p>To create a transition effect, you must specify two things: </p>
+    <ul>
+        <li>the CSS property you want to add an effect to</li>
+        <li>the duration of the effect</li>
+    </ul>
+    <note>Note: if the duration part is not specified, the transition will have no effect, because the default value is
+        0.</note>
+    <p>
+        The following example shows a 100px * 100px red DIV element. The DIV element has also specified a transition
+        effect for the width property, with a duration of 2 seconds.
+        The transition effect will start when the specified CSS property (width) changes value.
+
+        Now, let us specify a new value for the width property when a user mouses/hover over the DIV element.
+
+    </p>
+    <p>Hover over the div element below to see the transition.</p>
+    <div id="example1"></div>
+    <p>notice that when the cursor mouses out of the element, it will gradually change back to its original style.</p>
+    <h1 id="title">Change Several Property Values</h1>
+    <p>The following example adds a transition effect for both the width and height property, with a duration of 2
+        seconds for the width and 4 seconds for the height:
+        Hover over the div element below to see the transition effect:
+    </p>
+    <div id="example2"></div>
+    <br>
+    <h1 id="title">Specify the speed Curve of the Transition</h1>
+    <p>The transition-timing-function property specifies the speed curve of the transition effect.
+        The transition-timing-function property can have the following values:
+    <ul>
+        <li>ease - specifies a transition effect with a slow start, then fast the end slowly (this is default)</li>
+        <li>linear - specifies a transition effect with the same speed from start to end</li>
+        <li>ease-in - specifies a transition effect with a slow start</li>
+        <li>ease-out - specifies a transition effect with a slow end</li>
+        <li>ease-in-out - specifies a transition effect with a slow start and end</li>
+        <li>cubic-bezier(n,n,n,n) - lets you define your own values in a cubic-bezier function</li>
+    </ul>
+    The following example shows some of the different speed curves that can be used.
+    </p>
+
+    <div id="example3">linear</div>
+    <div id="example4">ease</div>
+    <div id="example5">ease-in</div>
+    <div id="example6">ease-out</div>
+    <div id="example7">ease-in-out</div>
+    <h1 id="title">Delay the Transition Effect</h1>
+    <p id="title">The transition-delay property specifies a delay (in seconds) for the transition effect. The following
+        example has a 1 second delay before starting:</p>
+
+    <p>Hover over the div element below to see the delayed transition effect</p>
+    <div id="example8"></div>
+    <h1>Transition + Transformation</h1>
+    <p>THe following example adds a transition effect to the Transformation</p>
+    <p>Hover over the div element below:</p>
+    <div id="example9"></div>
+
+
+
+
+</body>
+
+
+</html>

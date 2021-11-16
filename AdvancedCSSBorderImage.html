@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <!--With the CSS border-image property, we can set an image 
+        to be used as the border around the element.
+    
+        This property allows to specify an image to be used
+        instead of normal border around an element.
+
+        The property has three parts:
+
+        1.The image to use as the border
+        2.Where to slice the image
+        3.Define whether the middle sections should be repeated or stretched.
+    
+    -->
+    <title>CSS Border Images - Advanced CSS</title>
+    <style>
+        #borderimg {
+            border: 10px solid transparent;
+            padding: 15px;
+            border-image: url(Images/borderPractice.png) 30 round;
+        }
+        #borderimg2 {
+            border: 10px solid transparent;
+            padding: 15px;
+            border-image: url(Images/borderPractice.png) 30 stretch;
+        }
+        #borderimg3 {
+            border: 10px solid transparent;
+            padding: 15px;
+            border-image: url(Images/borderPractice.png) 50 round;
+        }
+        #borderimg4 {
+            border: 10px solid transparent;
+            padding: 15px;
+            border-image: url(Images/borderPractice.png) 20%;
+        }
+        #borderimg5 {
+            border: 10px solid transparent;
+            padding: 15px;
+            border-image: url(Images/borderPractice.png) 30%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Advanced CSS Concepts - Border Images</h1>
+<br>
+<div id="practice1">
+<h2>The border-image Property</h2>
+
+<p>The middle sections of the image are repeated to create the border: </p>
+<p id="borderimg">border-image : url(Images/SkullBorder.png) 30 round;</p>
+
+<p>Here is the original image:</p>
+<img src="Images/borderPractice.png">
+<p><strong>Note:</strong>Internet Explorer 10, and earlier versions, do no support the border-image property.</p>
+</div>
+
+<div id="practice2">
+<p>The middle sections of the image are stretched to create the border: </p>
+<p id="borderimg2">border-image: url(Images/borderpractice.png) 30 stretch;</p>
+<br>
+<p>Here is the original image:</p><img src="Images/borderPractice.png">
+
+</div>
+
+<div id="practice3">
+<h1>border-image Property Styled</h1>
+<br>
+<p id="borderimg3">border-image: url(Images/borderPractice.png) 50 round;</p>
+<p id="borderimg4">border-image: url(Images/borderPractice.png) 20% round;</p>
+<p id="borderimg5">border-image: url(Images/borderPractice.png) 30% round;</p>
+</div>
+
+</body>
+
+</html>
+<!-- TIP: The border-image property is a shorthand property for the border-image-source, border-image-slice,
+border-image-width,
+border-image-outset and border-image-repeat properties. -->

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en-US, es-MX">
+
+<head>
+    <title>CSS Tooltip - Example</title>
+    <!-- make the website responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" dir="ltr">
+    <meta name="description" content="SEO goes here!!!">
+    <meta name="application-name" content="CSS Animation">
+    <!-- Add the fonts URL to be use in the meta below -->
+    <link rel="stylesheet" href="fonts url goes here">
+    <!--To add a favicon to our website, either save the favicon image to the root directory of your webserver, or create
+   a folder in the root directory called images, and save your favicon image in this folder. A common name for a favicon is favicon.ico
+
+   Next, add a <link> element to your "index.html" file, after the <title> element, like this:
+   -->
+    <link rel="icon" type="images/x-icon" href="Images/FaviconFiles/favicon.ico">
+    <style>
+        #title {
+            font-weight: bolder;
+            text-align: center;
+        }
+
+        body {
+            background-color: navajowhite;
+        }
+
+        p {
+            font-size: 20px;
+        }
+
+
+        /*  Tooltip Example  */
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            border-bottom: 1px dotted blue;
+        }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 120px;
+            background-color: dimgrey;
+            color: rgb(50, 228, 174);
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+
+            /* Position of the tooltip */
+            position: absolute;
+            z-index: 1;
+            /*To change the position of the tooltip to the right:
+    
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    left: 105%;
+    */
+            /* Left side tooltip 
+    
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    right: 105%;
+    */
+
+
+
+        }
+
+        /* Arrow tooltip with Bottom Arrow */
+        .tooltip .tooltiptext::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: black transparent transparent transparent;
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="title">Demo: Tooltip Examples</h1>
+    <h2 style="text-align: center;">Creating Tooltips with CSS</h2>
+    <br>
+    <p>A tooltip is often used to specify extra information about something when the user moves the mouse pointer over
+        an website element.</p>
+    <h1 id="title"></h1>
+    <h2 id="title">Basic Tooltip</h2>
+    <p>Create a tooltip that appears when the user moves over an element:</p>
+
+    <div class="tooltip">Hover over me!!!!!
+        <span class="tooltiptext">This appears when hover over the text! Tooltip!</span>
+    </div>
+    <p>In future examples we will change the position of the tool tip.</p>
+    <h1 id="title">Example Explained</h1>
+    <p><b>HTML:</b> Use a container element (like DIV) and add the "tooltip" class to it. When the user mouse over this
+        DIV, it will show the tooltip text.
+        The tooltip text is placed inside an inline element (like SPAN) with "class="tooltiptext".<br>
+
+        <b>CSS:</b> The tooltip class uses position:relative, which is needed to position the tooltip text
+        (position:absolute).<b>Note:</b> See examples below on how to position the tooltip.
+
+        The tooltiptext class holds the actual tooltip text. It is hidden by default, and will be visible on hover. We
+        have also added some basic styles to it: 120px width, background color, text color,
+        centered text, and 5px top to bottom padding.<br>
+
+
+        THe CSS border-radius property is used to add rounded corners to the tooltip text.
+
+        The ":hover" selector is used to sho the tooltip text when user moves the mouse over the DIV class="tooltip".
+    </p>
+    <h1 id="title">Positioning Tooltips</h1>
+    <p>In this example, the tooltip is placed to the right (left:105%) of the "hoverable" text (DIV). Also note that
+        top:-5px is used to place it in the middle of its container element.
+        <br>
+        We use the number 5 because the tooltip text has a top and bottom padding of 5px. If you increase its padding,
+        also increase the value of the top property to ensure that it stays in the middle.<br>
+        The same applies if we want to tooltip place to the left.
+    </p>
+</body>
+
+</html>

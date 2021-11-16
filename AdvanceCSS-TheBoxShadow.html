@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <!--Make the website responsive-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Shadow</title>
+    <style>
+        #example1 {
+            width: 300px;
+            height: 100px;
+            padding: 15px;
+            background-color: yellowgreen;
+            box-shadow: 15px 15px;
+        }
+
+        #example2 {
+            /* Adding color to the shadow */
+            width: 300px;
+            height: 100px;
+            padding: 15px;
+            background-color: yellowgreen;
+            box-shadow: 10px 10px lightsteelblue;
+        }
+
+        #example3 {
+            width: 300px;
+            height: 100px;
+            padding: 15px;
+            background-color: yellowgreen;
+            box-shadow: 10px 10px 5px grey;
+        }
+
+        div.card {
+            width: 250px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            text-align: center;
+        }
+
+        div.header {
+            background-color: #4caf54;
+            color: white;
+            padding: 10px;
+            font-size: 40px;
+        }
+
+        div.container {
+            padding: 10px;
+        }
+
+        div.polaroid {
+            width: 250px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            text-align: center;
+
+        }
+        
+    </style>
+</head>
+
+<body>
+    <h1>CSS <b>box-shadow</b> Property</h1>
+    <p>The CSS <b style="color: red;">box-shadow</b> property applies to elements. In its simples use, you only specify
+        the horizontal shadow and the vertical shadow:<br></p>
+    <h2>Example 1 - Shadow Box</h2>
+    <div id="example1">This is a div element with a box-shadow.</div>
+    <br>
+    <h2>Example 2 - Color Shadow</h2>
+    <div id="example2">This is a div element with a box-shadow with color</div>
+    <br>
+    <h2>Example 3 - Blur Effect</h2>
+    <div id="example3">This is a div element with a box-shadow</div>
+    <br>
+    <div>
+        <h1>Cards</h1>
+        <p>You can use the <b style="color:red;">box-shadow</b> property to create paper-like cards:<br></p>
+        <h2>Example 1 - "Text Card"</h2>
+        <div class="card">
+            <div class="header">
+                <h1>4</h1>
+            </div>
+            <div class="container">
+                <p>January 4, 1984</p>
+            </div>
+        </div>
+        <br>
+        <div>
+            <h1>Example 2 - "Image Card"</h1>
+            <h2>Polaroid Images / Cards</h2>
+            <p>The <b style="color: red;">box-shadow</b> property can be used to create paper like cards:<br></p>
+            <div class="polaroid"><img src="Images/astronauttwo.jpg" alt="Astronaut" style="width: 100%;">
+            <div class="container">Into deep Space</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

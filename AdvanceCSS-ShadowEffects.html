@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Shadow Effects</title>
+    <style>
+        #boldertitle {
+            font-weight: bolder;
+        }
+
+        #shadow0 {
+            text-shadow: 2px 2px;
+        }
+
+        #shadow1 {
+            text-shadow: 2px 2px red;
+        }
+
+        #shadow2 {
+            text-shadow: 2px 2px 5px red;
+        }
+
+        #shadow3 {
+            color: white;
+            text-shadow: 2px 2px 4px #000000;
+        }
+
+        #shadow4 {
+            text-shadow: 0 0 3px #FF0000;
+        }
+
+        #shadow5 {
+            text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+        }
+
+        #shadow6 {
+            color: white;
+            text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+        }
+
+        #shadow7 {
+            color: yellow;
+            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="boldertitle">CSS Shadows Effects</h1>
+    <br>
+    <p>With CSS you can add shadow to text and to elements. In these chapters we will learn about the following
+        properties</p>
+    <ul>
+        <li style="color: red;">text-shadow</li>
+        <li style="color:red;">box-shadow</li>
+    </ul>
+    <br>
+    <h1 id="boldertitle">CSS Text Shadow</h1>
+    <p>The CSS text-shadow</p>
+    <br>
+    <p>The CSS text-shadow property applies shadow to text. in its simplest use, you only specify the horizontal shadow
+        (2px) and the vertical shadow (2px):</p>
+    <h1 id="shadow0">Text-shadow effect!!!</h1>
+    <br>
+    <p>Next, add a color to the shadow:
+    </p>
+    <h1 id="shadow1">Text-shadow effect!!!</h1>
+    <br>
+    <p>Then, add a blur effect to the shadow:</p>
+    <h1 id="shadow2">Text-shadow effect blur shadow</h1>
+    <br>
+    <p>The following example shows a white text with black shadow:</p>
+    <h1 id="shadow3">Text-shadow effect - white text</h1>
+    <br>
+    <p>The following examples shows a red neon glow shadow:</p>
+    <h1 id="shadow4">Text shadow effect - neon glow</h1>
+    <br>
+    <h1 id="boldertitle">Multiple Shadows</h1>
+    <p>To add more than one shadow to the next, you can add a comma-separated list of shadows. The following example
+        shows a red and blue neon glow shadow:</p>
+    <h1 id="shadow5">Text shadows effect - red and blue neon glow!</h1>
+    <br>
+    <p>The following example shows a white text with black, blue, and darkblue shadow:</p>
+    <h1 id="shadow6">Text shadow effect - black, blue, and darkblue shadow</h1>
+    <br>
+    <p>You can also use the text-shadow property to create a plain border around some text (without shadows):</p>
+    <h1 id="shadow7">Border around text!!</h1>
+
+    <!--Examples of HTML from Linkedin learning-->
+    <h3>
+        code of last example:
+    </h3>
+    <p>
+        <code>
+    color: yellow;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+        </code>
+    </p>
+    
+    <blockquote>
+        This exercises are based on w3school content. They are for practice and educational purpose only, We/I do not
+        attempt to not give credit to its creator.
+
+    </blockquote>
+    
+    <time>October 3, 2021</time>
+    <br>
+    <p>This is just an example of<sup>superscript</sup>.<br> While this is an example of <sub>subscript</sub>.</p>
+
+    <p>Not related to the past tutorial. </p>
+    <br>
+    <article>
+        <video controls>
+            <source src="">
+            <source src="">
+        </video>
+    </article>
+
+</body>
+
+</html>

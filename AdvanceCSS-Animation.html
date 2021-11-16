@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en-US, es-MX">
+
+<head>
+    <title>CSS Animations</title>
+    <!-- make the website responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" dir="ltr">
+    <meta name="description" content="SEO goes here!!!">
+    <meta name="application-name" content="CSS Animation">
+    <!-- Add the fonts URL to be use in the meta below -->
+    <link rel="stylesheet" href="fonts url goes here">
+    <!--To add a favicon to our website, either save the favicon image to the root directory of your webserver, or create
+    a folder in the root directory called images, and save your favicon image in this folder. A common name for a favicon is favicon.ico
+
+    Next, add a <link> element to your "index.html" file, after the <title> element, like this:
+    -->
+    <link rel="icon" type="images/x-icon" href="Images/FaviconFiles/favicon.ico">
+    <style>
+        #title {
+            text-align: center;
+            font-weight: bolder;
+        }
+
+        body {
+            background-color: peachpuff;
+        }
+
+        div#example1 {
+            width: 100px;
+            height: 100px;
+            background-color: royalblue;
+            animation-name: example1;
+            animation-duration: 4s;
+        }
+
+        /* code for the animation */
+        @keyframes example1 {
+            from {
+                background-color:royalblue;
+            }
+
+            to {
+                background-color: yellowgreen;
+            }
+        }
+        div#example2 {
+            width: 100px;
+            height: 100px;
+            background-color: tomato;
+            animation-name: example2;
+            animation-duration: 4s;
+        }
+        /* code for the animation */
+        @keyframes example2 {
+            0% {background-color: tomato;}
+            25% {background-color: violet;}
+            50% {background-color: yellowgreen;}
+            100% {background-color: aqua;}
+        }
+        div#example3 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: relative;
+            animation-name: example3;
+            animation-duration: 4s;
+        }
+        /* code for the animation */
+        @keyframes example3 {
+            0% {background-color:orange; left: 0px; top: 0px;}
+            25% {background-color: yellow; left: 200px; top: 0px;}
+            50% {background-color: lime; left: 200px; top: 200px;}
+            75% {background-color: rgb(0, 0, rgb(34, 87, 233)); left: 0px; top: 200px;}
+            100% {background-color: purple; left: 0px; top: 0px;}
+        }
+        /* Delayed animation 
+            DIV set up
+        */
+        div#example4 {
+            width: 100px;
+            height: 100px;
+            background-color: saddlebrown;
+            position: relative;
+            animation-name: example4;
+            animation-duration: 4s;
+            animation-delay: 2s;
+        }
+        /* code for the delayed animation */
+        @keyframes example4 {
+            0% {background-color: skyblue; left: 0px; top: 0px;}
+            25% {background-color: yellow; left: 200px; top: 0px;}
+            50% {background-color: magenta; left: 200px; top: 200px;}
+            75% {background-color: coral; left: 0px; top: 200px;}
+            100% {background-color:red; left: 0px; right: 0px;}
+        }
+        div#example5 {
+            width: 100px;
+            height: 100px;
+            background-color: cadetblue;
+            position: relative;
+            animation-name: example5;
+            animation-duration: 4s;
+            animation-delay: -2s;
+        }
+        /* Code for animation with negative values  */
+        @keyframes example5 {
+            0% {background-color: chartreuse; left: 0px; top: 0px;}
+            25% {background-color: cyan; left: 200px; top: 0px;}
+            50% {background-color: gold; left: 200px; top: 200px;}
+            75% {background-color: hotpink; left: 0px; top: 200px;}
+            100% {background-color:indigo;}
+        }
+        /* Code for repeated animation */
+        div#example6 {
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            position: relative;
+            animation-name: example6;
+            animation-duration: 4s;
+            animation-iteration-count: 3;
+        }
+        /* Repeated animation code */
+        @keyframes example6 {
+            0%   {background-color:chocolate; left:0px; top:0px;}
+           25%  {background-color:darkgray; left:200px; top:0px;}
+           50%  {background-color:deepskyblue; left:200px; top:200px;}
+           75%  {background-color:indigo; left:0px; top:200px;}
+          100% {background-color:palegoldenrod; left:0px; top:0px;}
+        }
+        /* code for infinite animation repetition */
+        div#example7 {
+            width: 100px;
+            height: 100px;
+            position: relative;
+            background-color: pink;
+            /* Shorthand property */
+            animation: example7 4s infinite ;
+        }
+        /* infinite animation code */
+        @keyframes example7 {
+             0%   {background-color:red; left:0px; top:0px;}
+            25%  {background-color:yellow; left:200px; top:0px;}
+            50%  {background-color:blue; left:200px; top:200px;}
+            75%  {background-color:green; left:0px; top:200px;}
+           100% {background-color:red; left:0px; top:0px;}
+}    
+    /* Reverse animation */
+div#example8 {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    background-color: seagreen;
+    animation-name: example8;
+    animation-duration: 4s;
+    animation-direction: reverse;
+}
+@keyframes example8 {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:200px;}
+  75%  {background-color:green; left:0px; top:200px;}
+  100% {background-color:red; left:0px; top:0px;}
+}
+    /* Reverse animation - alternate */
+    div#example9 {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    background-color: seagreen;
+    animation-name: example8;
+    animation-duration: 4s;
+    animation-iteration-count: 2;
+    animation-direction: alternate;
+}
+@keyframes example9 {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:200px;}
+  75%  {background-color:green; left:0px; top:200px;}
+  100% {background-color:red; left:0px; top:0px;}
+}
+    /* Reverse animation */
+    div#example10 {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    background-color: seagreen;
+    animation-name: example8;
+    animation-duration: 4s;
+    animation-iteration-count: 2;
+    animation-direction: alternate-reverse;
+}
+@keyframes example10 {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:200px;}
+  75%  {background-color:green; left:0px; top:200px;}
+  100% {background-color:red; left:0px; top:0px;}
+}
+/* 
+ CSS Animation Shorthand */
+div#example11 {
+    width: 100px;
+    height: 100px;
+    background-color: chocolate;
+    position: relative;
+    animation: example11 5s linear 2s infinite alternate;
+}
+
+
+@keyframes example11 {
+  0%   {background-color:cyan; left:0px; top:0px;}
+  25%  {background-color:gold; left:200px; top:0px;}
+  50%  {background-color:greenyellow; left:200px; top:200px;}
+  75%  {background-color:red; left:0px; top:200px;}
+  100% {background-color:springgreen; left:0px; top:0px;}
+}
+</style>
+
+</head>
+
+<body>
+    <h1 id="title">CSS Animations</h1>
+    <p>CSS allows animation of HTML elements without using JavaScript or Flash.
+        This example will cover the following properties:
+    <ul>
+        <li>
+            @keyframes
+        </li>
+        <li>
+            animation-name
+        </li>
+        <li>
+            animation-duration
+        </li>
+        <li>
+            animation-delay
+        </li>
+        <li>
+            animation-iteration-count
+        </li>
+        <li>
+            animation-direction
+        </li>
+        <li>
+            animation-timing-function
+        </li>
+        <li>
+            animation-fill-mode
+        </li>
+        <li>
+            animation
+        </li>
+
+    </ul>
+
+    </p>
+
+    <h1>What are CSS Animations?</h1>
+    <p>An animation lets an element gradually change from one style to another. You can change as many CSS properties
+        you want, as many times as you want.
+        To use CSS animation, you must first specify some keyframes for the animation.
+        Keyframes hold what styles the element will have at certain times.
+    </p>
+    <h1>The @keyframes Rule</h1>
+    <p>When you specify CSS styles inside the @keyframes rule, the animation will gradually change from the current
+        style to the new style at certain times. To get an animation to work, you must bind the animation to an
+        element.<br>
+        The following example binds the "example" animation to the DIV element. The animation will last for 4 seconds,
+        and it will gradually change the background-color of the DIV element from " " to " ":
+    </p>
+
+    <h1 id="title">CSS Animation</h1>
+    <div id="example1"></div>
+    <p><b>Note:</b> When an animation is finished, it goes back to its original style.
+    <br>
+    <br>
+    THe animation-duration property defines how long an animation should take to complete. If the animation-duration property is not specified,
+    no animation will occur, because the default value is 0s (0 seconds).<br>
+    <br>In the example above we have specified when the style will change by using the keywords "from" and "to" (which represents 0% (start) and 100% (complete)).
+    It can also possible to use percent. By using percent, you can add as many style changes as you like.
+        <br>
+    The following example will change the background-color of the DIV element when the animation is 25% complete, 50% complete, and again when the animation is 100% complete:
+    
+    </p>
+    <h2 id="title">CSS Animation set up by percent</h2>
+    <div id="example2"></div>
+    <p>The following example will change both the background-color and the position of the DIV element when the animation is at 25%, 50%, and 100% complete:</p>
+    <div id="example3"></div>
+    <h1>Delay an Animation</h1>
+    <p>The animation-delay property specifies a delay for the start of an animation. The following example ahs a 2 seconds delay before starting the animation:
+
+    </p>
+    <div id="example4"></div>
+    <p>Negative values are also allowed. If using negative values, the animation will start as if it had already been played for N seconds.
+        In the following example, the animation will start as if it had already been playing for 2 seconds: 
+
+    </p>
+<div id="example5"></div>
+<br>
+<h1 id="title">Set How Many Times an Animation Should Run</h1>
+<p>The <b style="color: red;">animation-iteration-count</b> property specifies the number times an animation should run.
+The following example will run the animation 3 times before it stops:
+</p>
+<div id="example6"></div>
+<br>
+<p>The animation-iteration-count property can be set to infinite to let the animation run for ever:</p>
+<div id="example7"></div>
+<br>
+<h1 id="title">Run Animation in Reverse Direction or Alternate Cycles</h1>
+<p>The <b style="color: red;">animation-direction</b> property specifies whether an animation should be played forwards, backwards or in alternate cycles. The animation-direction property can have the following cycles.
+<br>
+The animation-direction property can have the following values:
+
+<ul>
+    <li>normal -  The animation is played as normal (forwards). THis is default</li>
+    <li>reverse - The animations is played in reverse direction (backwards)</li>
+    <li>alternate - The animation is played forwards first, then backwards</li>
+    <li>alternate-reverse - The animation is played backwards first then forwards</li>
+</ul>
+The following example will run the animation in reverse direction (backwards):
+</p>
+<div id="example8"></div>
+<p>The following example uses the value "alternate" to make the animation run forwards first, then backwards:</p>
+<div id="example9"></div>
+<p>The following example uses the value "alternate-reverse" to make the animation rub backwards first, then forwards:</p>
+<div id="example10"></div>
+<br>
+<h1 id="title">The CSS Animation short hand</h1>
+<p>The animations above can also be achieved by using the shorthand animation property:</p>
+<div id="example11"></div>
+
+</body>
+
+</html>

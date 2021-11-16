@@ -1,0 +1,111 @@
+<!DOCTYPE html>>
+<html lang="en-US">
+
+<head>
+    <title>CSS Text Effects</title>
+    <!--Make the website responsive-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" dir="ltr"><!--This will change the character set and the direction of the text-->
+    <!-- For engin search results or (I think is SEO) use the next meta information/attributes.
+    when some text appears in google search (sometimes in bold text) this is where it comes from. SEO!!
+    -->
+    <meta name="description" content="A description of the website, learning, css, tutorial, etc.">
+    <!--when the page is save to home screen, a tile image should be add it here and a background color-->
+    <meta name="application-name" content="CSS Practice - CSS Effects">
+    <!-- The CSS -->
+    <style>
+    #boldTitle {
+        font-weight: bold;
+        text-align: center;
+    }
+    div.test{
+            white-space: nowrap;
+            width: 200px;
+            overflow: hidden;
+            border: 1px solid #000000;
+        }
+        div.test:hover {
+            overflow: visible;
+        }
+        p.test1 {
+         white-space: nowrap;
+         width: 200px;
+         border: 1px solid #000000;
+         overflow: hidden;
+         text-overflow: clip;   
+        }
+        p.test2 {
+            white-space: nowrap;
+            width: 200px;
+            border: 1px solid #000000;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        p.test3 {
+            width: 11em;
+            border: 1px solid #000000;
+            word-wrap: break-word;
+        }
+        p.test4 {
+            width: 140px;
+            border: 1px solid #000000;
+            word-break: keep-all;
+        }
+        p.test5 {
+            width: 140px;
+            border: 1px solid #000000;
+            word-break: break-all;
+        }
+        p.test6 {
+            writing-mode: horizontal-tb;
+        }
+        span.test7 {
+            writing-mode: vertical-rl;
+        }
+        p.test8{
+            writing-mode: vertical-lr;
+        }
+    </style>
+
+
+</head>
+
+<body>
+<h1 style="text-align: center;"><b>CSS Text Overflow, Word Wrap, Line Breaking Rules, And Writing Modes</b></h1>
+<p>In this chapter we will learn about the following properties:</p>
+<ul style="color: red;">
+    <li>text-overflow</li>
+    <li>word-wrap</li>
+    <li>word-break</li>
+    <li>writing-mode</li>
+</ul>
+<h1 style="text-align:center">CSS Text Overflow</h1>
+<p>The CSS <b style="color: red;">text-overflow</b> property specifies how overflow content that is not displayed should be signaled to the user.</p>
+<p>The following two paragraphs contains a long text that will not fit in the box.</p>
+<h2>text-overflow: clip example:</h2>
+<p class="test1">This is some long text that will not fit in the box</p>
+<h2>text-overflow: clip example 2:</h2>
+<p class="test2">This is some long text that will not fit in the box</p>
+<p>This next example demonstrates how to show the missing text when hover over the two divs</p>
+<h6>Hover over the div...</h6>
+<div class="test" style="text-overflow: ellipsis;">This is some long text that will not fit in the box</div>
+<br>
+<div class="test" style="text-overflow: clip;">This is some long text that will not fit in the box</div>
+<h1 id="boldTitle">CSS Word Wrapping</h1>
+<p>The CSS <b style="color: red;">word-wrap</b> property allows long words to be able to be broken and wrap onto the next line. <br>If a word is too long to fit within an area, it expands outside:</p>
+<p class="test3">This paragraph contains a very long word: 
+    Like I said....thisiisaverylongwordthathasnospaceinbetweenwordsandtheiwordwrapproppertyisgoingtoshowit. The long word will break and wrap to the next line.
+</p>
+<h1 id="boldTitle">CSS Word Breaking</h1>
+<p>The CSS <b style="color: red;">word-break</b> property specifies line breaking rules.</p>
+<p class="test4">This is some paragraph contains some text. This line will-break-at-hyphens.</p>
+<p class="test5">This paragraph contains some text. The lines will break at any character.</p>
+<h1 id="boldTitle">CSS Writing Mode</h1>
+<p>The CSS <b style="color: red;">writing-mode</b> property specifies whether lines of text are laid out horizontally or vertically.</p>
+<p class="test6">some text with default writing-mode</p>
+<p>Some text with a span element with a <span class="test7">vertical-rl</span> writing-mode.</p>
+<p class="test8">Some text with writing-mode: vertical-lr</p>
+
+</body>
+
+</html>

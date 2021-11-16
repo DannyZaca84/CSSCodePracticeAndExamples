@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <!-- Make the website responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advance CSS - CSS Animatable</title>
+    <style>
+        #animaDiv {
+            width: 300px;
+            height: 200px;
+            background: red;
+            animation: mymove 7s infinite;
+        }
+
+        @keyframes mymove {
+            from {
+                background-color:greenyellow;
+            }
+        }
+        to {
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS Animatable</h1>
+    <p>Some CSS properties are <i>animatable</i>, meaning that they can be used in animations and transitions.<br>
+        Animatable properties can change gradually from one value to another, like sie, numbers, percentage and color.
+    </p>
+    <br>
+    <h1>Animation of background-color</h1>
+    <br>
+    <p>Gradually change the background-color from lightpink to mediumvioletred</p>
+    <br>
+    <div id="animaDiv"></div>
+    <br>
+    <p>
+        <strong>Note:</strong> CSS Animations do not work in Internet Explorer 9 and earlier versions.
+    </p>
+</body>
+
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS 2D Transform</title>
+    <!-- Make the website responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" dir="ltr">
+    <meta name="description" content="A Description that will appear in the search.Usually appears in bold">
+    <meta name="application-name" content="CSS 2D Transformation">
+    <!-- Add fonts URL to be used in the page -->
+    <link rel="stylesheet" href="https://fonts.google.com/css2?">
+    <style>
+        #title{
+            font-weight: bolder;
+            text-align: center;
+        }
+        /* The translate() Method Example */
+        div.example1 {
+            width: 300px;
+            height: 100px;
+            background-color: khaki;
+            border: 1px solid black;
+            transform: translate(50px, 100px);
+        }
+        div.example2 {
+            width: 300px;
+            height: 100px;
+            background-color: lemonchiffon;
+            border: 1px solid black;
+        }
+        div#rotate {
+            transform: rotate(29deg);
+            background-color: lemonchiffon;
+            border: 1px solid black;
+            width: 300px;
+            height: 100px;
+            background-color: lemonchiffon;
+            border: 1px solid black;
+        }
+        div#example3 {
+            width: 300px;
+            height: 100px;
+            background-color: yellow;
+            border: 1px solid black;
+        }
+        div#rotateleft {
+            transform: rotate(-20deg);
+            width: 300px;
+            height: 100px;
+            background-color: yellow;
+            border: 1px solid black;
+        }
+        div#scale {
+            margin: 150px;
+            width: 200px;
+            height: 100px;
+            background-color: turquoise;
+            border: 1px solid black;
+            transform: scale(2,3);
+        }
+        div#reduce {
+            margin: 150px;
+            width: 200px;
+            height: 100px;
+            background-color: bisque;
+            border: 1px solid black;
+            transform: scale(0.5,0.5);
+        }
+        div#scalexx {
+            margin: 150px;
+            width: 200px;
+            height: 100px;
+            background-color: cornflowerblue;
+            border: 1px solid black;
+            transform: scaleX(2);
+        }
+        div#scalexreduce {
+            margin: 150px;
+            width: 200px;
+            height: 100px;
+            background-color: darkgoldenrod;
+            border: 1px solid black;
+            transform: scale(0.5);
+        }
+        div#scaleyy {
+            margin: 150px;
+            width: 200px;
+            height: 100px;
+            background-color: rosybrown;
+            border: 1px solid black;
+            transform: scaleY(3);
+        }
+        div#scaleyreduce {
+            margin: 150px;
+            width: 200px;
+            height: 100px;
+            background-color: darkkhaki;
+            border: 1px solid black;
+            transform: scaleY(0.5);
+        }
+    </style>
+</head>
+<body>
+<h1 id="title">CSS 2D Transform</h1>
+<p>CSS transforms allow you to move, rotate, scale, and skew elements. This practice is focused on the CSS property <b style="color: red;"></b></p>
+<h1 id="title">CSS 2D Transforms Methods</h1>
+<p>With the CSS <b style="color: red;">transform </b>property you can use the following 2D transformation methods:</p>
+<ul>
+    <li>translate()</li>
+    <li>rotate()</li>
+    <li>scaleX()</li>
+    <li>scaleY()</li>
+    <li>scale()</li>
+    <li>skewX()</li>
+    <li>skewY()</li>
+    <li>skew()</li>
+    <li>matrix()</li>
+</ul>
+<note>Keep practicing</note>
+
+<h1 id="title">The translate() Method</h1>
+<P>The <b style="color: red;">translate()</b> method moves an element from its current position (according to the parameters given for X-axis and the Y-axis). The following example moves the <div> element 50 pixels to the right, and 100 pixels down from its current position:</div></P>
+<h1>The translate() method moves an element from its current position:</h1>
+<br>
+<div class="example1">
+    This div element is moved 50 pixels to the right, and 100 pixels down from its current position.
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h1 id="title">The rotate Method</h1>    
+<p>The <b style="color: red;">rotate()</b> method rotates an element clockwise or counter-clockwise according to a given degree. The following example rotates the <div> element clockwise with 20 degrees:</div></p>
+<h1 id="title">The rotate() Method</h1>
+<p>The rotate() methods rotates and element clockwise or counter-clockwise.</p>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="example2"> 
+    This is a normal div element.
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div id="rotate">This div element is rotated clockwise 29 degrees.</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<p>Using the negative values will rotate the element counter-clockwise. The following example rotates the DIV element counter-clockwise with 20 degrees:</div></p>
+<h1 id="title">The rotate() Method</h1>
+<p>THe rotate() method rotates an element clockwise or counter-clockwise</p>
+<div id="example3">This is a normal DIV element</div>
+<div id="rotateleft">This DIV element is rotated counter-clockwise with 20 degrees</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h1 id="title">The scale() Method</h1>
+<p>The <b style="color: red;">scale()</b> method increase or decrease the size of an element (according to the parameter given for the with and height). The following example increase the DIV element to be two times of its original width, and three times of its original height:</p>
+<div id="scale">This div element is two times of its original width, and three times of its original height.</div>
+<p>The following example decrease the DIV element to be half of its original width and height:</p>
+<div id="reduce">This div element is decreased to be half of its original width and height.</div>
+<h1 id="title">The scaleX() Method</h1>
+<p>The <b style="color: red;">scaleX()</b> method increases or decreases the width of an element. The following example increases the DIV element to be two times of its original with:</p>
+<div id="scalexx">This div element is two times of its original width</div>
+<p>The following example decreases the DIV element to be half of its original width:</p>
+<div id="scalexreduce">This div element is half of its original width.</div>
+<h1 id="title">The scaleY() Method</h1>
+<P>The <b style="color: red;"> scaleY() </b>method increases or decreases the height of an element. The following example increases the DIV element to be three times of its original height: </P>
+<div id="scaleyy">This div element is three times of its original height.</div>
+<p>The following example decreases the div element to be half ot its original height: </p>
+<div id="scaleyreduce">This div element is half of its original height.</div>
+
+
+</body>
+
+</html>

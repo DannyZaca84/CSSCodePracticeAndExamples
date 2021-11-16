@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+      /*  a[target] {
+            background-color: yellow;
+        }*/
+        
+        
+        /*The Link with target="_blan" gets a yellow background: */
+        a[target=_blank]{
+            background-color: burlywood;
+        }
+        /*The following example selects all elements with a class attribute value that begins with the word "top"*/
+        [class|=top]{
+            background: darksalmon;
+        }
+        /*To select ALL the elements with a class attribute value that BEGINS with "top" simple add " ^ " simbol, Example: [class^="top"] */
+        /*To select ALL the elements with a class attribute value that ENDS with "top" simple add " $ " simbol, Example: [class$="top"] */
+
+    </style>
+
+<body>
+    <h2>CSS [attribute] Selector Example</h2>
+    <p>The links with a target attribute gets a yellow background</p>
+<a href="https://www.w3schools.com">w3schools.com</a>
+<a href="https://www.disneyplus.com" target="_blank">Disney Plus</a>
+<a href="http://wikipedia.org" target="_top">wikipedia.org</a>
+<br>
+<br>
+<br>
+<h2>CSS [attribute|="value"] Selector Example</h2>
+<h1 class="top-header">Welcome</h1>
+<p class="top-text">Hello Mundo!!</p>
+<p class="topcontent">Need to do more coding, I will be sucessful!!!</p>
+
+</body>
+</head>
+
+</html>

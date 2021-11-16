@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <!-- Make the website responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- For engin search results or (I think is SEO) use the next meta information/attributes.
+    when some text appears in google search (sometimes in bold text) this is where it comes from. SEO!!
+    -->
+    <meta charset="UTF-8" dir="ltr">
+    <meta name="description" content="A description of this site that will show up in search engin results.">
+    <!-- when a page is save to home screen, tile image, and a background color.  -->
+    <meta name="application-name" content="CSS Practices">
+    <meta name="msapplication-TileImage" content="Insert image url">
+    <meta name="theme-color" content="#247211">
+
+    <title>CSS Gradients</title>
+    <style>
+        /* Example #1  */
+        #grad1 {
+            height: 200px;
+            background-color: red;
+            /* For browsers that do not support gradients */
+            background-image: linear-gradient(red, yellow);
+        }
+
+        #grad2 {
+            height: 200px;
+            background-color: red;
+            /* For browsers that do not support gradients */
+            background-image: linear-gradient(to right, green, cyan);
+        }
+
+        #grad3 {
+            height: 200px;
+            background-color: palevioletred;
+            /*For browsers that do not support gradients */
+            background-image: linear-gradient(to bottom right, palevioletred, rgb(208, 255, 0), purple)
+        }
+
+        #grad4 {
+            height: 100px;
+            background-color: crimson;
+            /*For browsers that do not support gradients */
+            background-image: linear-gradient(0deg, crimson, rgb(255, 255, 0));
+        }
+
+        #grad5 {
+            height: 100px;
+            background-color: crimson;
+            /*For browsers that do not support gradients */
+            background-image: linear-gradient(90deg, crimson, rgb(255, 255, 0));
+        }
+
+        #grad6 {
+            height: 100px;
+            background-color: crimson;
+            /*For browsers that do not support gradients */
+            background-image: linear-gradient(1800deg, crimson, rgb(255, 255, 0));
+        }
+
+        #grad7 {
+            height: 100px;
+            background-color: crimson;
+            /*For browsers that do not support gradients */
+            background-image: linear-gradient(-900deg, crimson, rgb(255, 255, 0));
+        }
+
+        #grad8 {
+            height: 200px;
+            background-color: crimson;
+            /*For browsers that do not support gradients */
+            background-image: linear-gradient(crimson, rgb(255, 255, 0), rgb(45, 173, 45));
+        }
+
+        #grad9 {
+            height: 200px;
+            background-color: crimson;
+            /*For browsers that do not support gradients */
+            background-image: linear-gradient(crimson, orange, rgb(255, 255, 0), green, blue, indigo, violet);
+        }
+
+        #grad10 {
+            height: 200px;
+            background-color: crimson;
+            /*For browsers that do not support gradients */
+            background-image: linear-gradient(crimson 10%, green 85%, blue 90%);
+        }
+        #grad11 {
+            height: 80px;
+            background-color: red;
+
+            background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+        }
+        #grad12 {
+            height: 200px;
+            background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(155,60,0,1));
+        }
+        #grad13 {
+            height: 200px;
+            background-image: repeating-linear-gradient(purple, yellow 25%, green 35%);
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <h1>CSS Gradients</h1>
+    <br>
+    <p>
+        CSS gradients let you display smooth transitions between two or more specified colors.
+        <br>
+        CSS defines two types of gradients:
+    </p>
+    <ul>
+        <strong>
+            <li>Linear gradients (goes down/up/left/right/diagonally)</li>
+            <li>Radial Gradients (defined by their center)</li>
+        </strong>
+    </ul>
+    <br>
+    <h1>CSS Linear Gradients</h1>
+    <br>
+    <p>To create a linear gradient we must define at least two color stops. Color stops are the colors you want to
+        render smooth transitions among.
+        you can also set a starting point and direction (or angle) along with the gradient effect.
+    </p>
+    <textarea style="width: 100%; height: 70px;">
+    <strong><h2>Syntax</h2></strong>
+    <br>
+    background-image: linear-gradient (direction, color-stop1, color-stop2,...);
+    </textarea>
+    <br>
+    <p>The following example shows a linear gradient that starts at the top. It starts red, transitioning to yellow:</p>
+    <br>
+    <h1>Linear Gradient - Top to Bottom</h1>
+    <p>This linear gradient starts red at the top, transitioning to yellow at the bottom:</p>
+    <div id="grad1"></div>
+    <br>
+    <h3>Direction - Left to Right</h3>
+    <br>
+    <p>The following example shows a linear gradient that starts from the left. it starts red, transitioning to yellow:
+    </p>
+    <br>
+    <h1>Linear Gradient - Left to Right</h1>
+    <br>
+    <p>This linear gradient starts green at the left, transitioning to cyan (to the right):</p>
+    <div id="grad2"></div>
+    <br>
+    <h3>Direction - Diagonal</h3>
+    <br>
+    <p>
+        You can make a gradient diagonally bu specifying both the horizontal and vertical starting positions.
+        <br>
+        The following example shows a linear gradient that starts at top left (and goes to bottom right).
+        Its starts palevioletred, transitioning to yellow.
+    </p>
+    <div id="grad3"></div>
+    <br>
+    <h1>Using Angles</h1>
+    <br>
+    <P> If you want more control over the direction of the gradient, you can define an angle, instead of the predefined
+        directions (to bottom, to top, to right, to left, to bottom right, etc.)
+        <br>
+        A value of 0deg is equivalent to "to top". A value of 90deg is equivalent to "to right". A value of 180deg is
+        equivalent to "to bottom"
+    </P>
+    <br>
+    <textarea style="width: 100%; height: 70px;">
+    <strong><h2>Syntax</h2></strong>
+    <br>
+    background-image: linear-gradient (angle, color-stop1, color-stop2,...);
+    </textarea>
+    <br>
+    <p>The following example shows how to use angles on linear gradients</p>
+    <br>
+    <div id="grad4">0deg</div><br>
+    <div id="grad5">-90deg</div><br>
+    <div id="grad6">180deg</div><br>
+    <div id="grad7">-90deg</div><br>
+    <br>
+    <h1>Using Multiple Color stops</h1>
+    <br>
+    <p>The following example shows a linear gradient (from top to bottom) with multiple color stops:</p>
+    <br>
+    <p><strong>Note:</strong> Color stops are spaced evenly when no percents are specified.</p><br>
+    <h2>3 Color Stops (evenly spaced):</h2>
+    <div id="grad8"></div>
+    <h2>7 Color Stops (evenly spaced:</h2>
+    <div id="grad9"></div>
+    <h2>3 Color Stops (not evenly spaced):</h2>
+    <div id="grad10"></div>
+    <br>
+    <br>
+    <p>Example of linear gradient - rainbow background</p>
+<div id="grad11" style="text-align: center;margin: auto; color: blanchedalmond;font-size: 40px;font: bold;">Rainbow Background!</div>
+<br>
+<h1>Using Transparency</h1>
+<br>
+<p>
+    CSS gradients also support transparency, which can be used to create fading effects.
+    To add transparency, we use the rgba() function to define the color stops. The last parameter in the rgba()
+    function can be a value from 0 to 1, and it defines the transparency of the color: 0 indicates full transparency, 1 indicates full color (no transparency).
+    <br>
+    The following example shows a linear gradient that starts from the left. It starts fully transparent, transitioning to full color brown:
+</p>
+<div id="grad12"></div>
+<br>
+<h1>Repeating a linear-gradient</h1>
+<br>
+<p>The repeating-linear-gradient() function is used to repeat linear gradients:</p>
+<br>
+<div id="grad13"></div>
+</body>
+
+</html>
