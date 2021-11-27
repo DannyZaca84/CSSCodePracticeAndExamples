@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Make the website responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO and description of the content of the website -->
+    <meta name="description" content="SEO goes here - Add keywords">
+    <meta name="application-name" content="The object-fit Property">
+    <!-- favicon images - the image that will be displayed in the tab(s) of the browser -->
+    <link rel="icon" type="images/x-icon" href="Images/FaviconFiles/favicon.ico">
+    <!-- Add the fonts that will be used by the website -->
+    <link rel="stylesheet" href="fonts url goes here">
+
+    <title>CSS Overriding Variables</title>
+
+    <style>
+        #title {
+            font-weight: bolder;
+            text-align: center;
+        }
+
+        body {
+            background-color: papayawhip;
+        }
+
+        /* Variable Override Example */
+
+        :root {
+            --blue: #1e90ff;
+            --white: white;
+        }
+
+        body {
+            background-color: var(--blue);
+        }
+
+        h2 {
+            border-bottom: 2px slid var(--blue);
+        }
+
+        .container {
+            color: var(--blue);
+            background-color: var(--white);
+            padding: 15px;
+        }
+
+        button {
+            --blue: red;
+            /* local variable will override global variable */
+            background-color: var(--white);
+            color: var(--blue);
+            border: 1px solid var(--blue);
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="title">CSS Overriding Variables</h1>
+    <h2 id="title">Override Global Variable With Local Variable</h2>
+    <p>Global variables can be accessed/used through the entire document, while local variables can be used only inside
+        the selector where it is declares.<br>
+        Sometimes we want the variables to change only in a specific section of the page.<br>
+        Assume we want a different color of blue for buttons elements. Then, we can re-declare the variable inside the
+        button selector. WHen we use var inside this selector, it will use the local variable value declared.
+        <br>
+        We see the local variable will override the global variable for the button elements, for example:
+        <br>
+    <div style="width: 150px; height: 50%; padding-left: 100px;">
+        <code>
+:root {
+    --blue: blue;
+    --white: white;
+}
+
+body {
+    background-color: var(--blue);
+}
+h2 {
+    border-bottom: 2px slid var(--blue);
+}
+.container {
+    color: var(--blue);
+    background-color: var(--white);
+    padding: 15px;
+}
+
+button {
+    --blue: #0000ff; /* local variable will override global variable */
+    background-color: var(--white);
+    color: var(--blue);
+    border: 1px solid var(--blue);
+    padding: 5px;
+}
+</code>
+    </div>
+    <!-- Example of variable override -->
+
+        <div class="container">
+            <h2>This is an example of...</h2>
+            <p>How to override a variable with a local variable. There is a different tone of blue in this "div".
+                for reference look at the code snippet above.
+            </p>
+            <p>Just some text to demonstrate how to the example above works. Just continue to practice, you'll get
+                better at it eventually.
+                good luck my friend!
+            </p>
+            <p>
+                <button>Yes</button>
+                <button>No</button>
+            </p>
+        </div>
+    
+
+
+
+
+    </p>
+</body>
+
+</html>
