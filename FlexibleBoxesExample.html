@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Make the website responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO and description of the content of the website -->
+    <meta name="description" content="SEO goes here - Add keywords">
+    <meta name="application-name" content="The object-fit Property">
+    <!-- favicon images - the image that will be displayed in the tab(s) of the browser -->
+    <link rel="icon" type="images/x-icon" href="Images/FaviconFiles/favicon.ico">
+    <!-- Add the fonts that will be used by the website -->
+    <link rel="stylesheet" href="fonts url goes here">
+
+    <title>Flexible Website Template</title>
+
+    <style>
+        #title {
+            font-weight: bolder;
+            text-align: center;
+        }
+        /* Flexible Boxes Example */
+        .flex-container {
+            display: flex;
+            flex-wrap: nowrap;
+            background-color: dodgerblue;
+        }
+        .flex-container > div {
+            background-color: #f1f1f1;
+            width: 100px;
+            margin: 10px;
+            text-align: center;
+            line-height: 75px;
+            font-size: 30px;
+        }
+
+        /* flex-container Example */
+    .flex-container2 {
+        display: flex;
+        background-color: dodgerblue;
+    }
+    .flex-container2 > div {
+        background-color: #f1f1f1;
+        margin: 10px;
+        padding: 20px;
+        font-size: 30px;
+    }
+    
+    </style>
+</head>
+
+<body>
+<h1 id="title">Flexible Boxes</h1>
+<div class="flex-container">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+</div>
+
+<p>A container with "flex-wrap: nowrap;" will never wrap its items.</p>
+<p><strong>Note:</strong> Flexbox is not supported in Internet Explorer 10 or earlier versions.</p>
+
+<h1 id="title">CSS Flex (Container)</h1>
+<h2 id="title">Parent Element (container)</h2>
+<br>
+<p>Like we specified in the example above, this is a flex container (the blue are) with three flex items. The flex container becomes flexible by setting the display property to flex, Example:</p>
+<h1 id="title">Create a Flex Container.</h1>
+<div class="flex-container2">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+</div>
+
+<br>
+<p>A flexible layout must have a parent element with the <em>display</em> property set to <em>flex</em>.</p>
+<p>Direct child element(s) of the container automatically becomes flexible items.</p>
+
+<p>The flex container properties are:
+<on>
+    <li>flex-direction</li>
+    <li>flex-wrap</li>
+    <li>flex-flow</li>
+    <li>justify-content</li>
+    <li>align-items</li>
+    <li>align-content</li>
+</on>
+    
+</p>
+
+</body>
+
+</html>
