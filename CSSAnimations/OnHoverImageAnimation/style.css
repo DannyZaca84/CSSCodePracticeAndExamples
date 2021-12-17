@@ -9,9 +9,8 @@ section
     position: relative;
     width: 100%;
     height: 100vh;
-    background: #111;
 }
-.human
+.bg
 {
     position: absolute;
     top: 0;
@@ -19,4 +18,11 @@ section
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+#particles-js
+{
+    position: relative;
+    height: 100vh;
+    background: #fff;
+    mix-blend-mode: screen;
 }
